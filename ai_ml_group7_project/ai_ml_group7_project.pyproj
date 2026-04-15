@@ -25,7 +25,7 @@
     <Compile Include="harshal_gradient_boosting.py" />
     <Compile Include="robert_decision_tree.py" />
     <Compile Include="sadavi_logistic_regression.py" />
-    <Compile Include="sara_random_forest.py" />
+    <Compile Include="sarah_random_forest.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
