@@ -1,0 +1,20 @@
+PROG2590 Project – Decision Tree on Adult Dataset
+============================================================
+
+Training samples: 21764
+Test samples: 5441
+Class distribution (train): {0: 0.7523433192427863, 1: 0.24765668075721375}
+
+BASELINE MODEL
+Accuracy: 0.8056
+ROC AUC: 0.7423
+
+TUNED MODEL
+Best parameters: {'classifier__criterion': 'entropy', 'classifier__max_depth': 10, 'classifier__min_samples_leaf': 8, 'classifier__min_samples_split': 20}
+Accuracy: 0.8506
+Precision: 0.7775
+Recall: 0.5553
+F1-score: 0.6479
+ROC AUC: 0.9042
+
+Cross-validation ROC AUC mean: 0.8948 (+/- 0.0064)
