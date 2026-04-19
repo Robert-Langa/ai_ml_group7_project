@@ -1,5 +1,5 @@
 ## Student Name: Sarah Veluz
-## Model : # Random Forest Model
+## Model : # Random Forest 
 
 
 import pandas as pd
