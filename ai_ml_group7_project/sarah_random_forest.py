@@ -2,8 +2,6 @@
 ## Model : # Random Forest Model
 
 
-## Adult Income Prediction
-
 import pandas as pd
 import time
 import matplotlib.pyplot as plt
