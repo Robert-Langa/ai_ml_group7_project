@@ -1,0 +1,30 @@
+Training set: 20403, features: 14
+Test set: 6802, features: 14
+
+
+Model 1 - Default
+Training Time: 3391.96 ms
+Prediction Time: 9.25 ms
+Accuracy: 0.865 (86.5%)
+
+Model 2 - n_estimators=1000
+Training Time: 35476.31 ms
+Prediction Time: 48.6 ms
+Accuracy: 0.875 (87.5%)
+
+Model 3 - learning_rate=0.01
+Training Time: 3242.06 ms
+Prediction Time: 7.17 ms
+Accuracy: 0.841 (84.1%)
+
+Model 4 - max_depth=5
+Training Time: 5666.12 ms
+Prediction Time: 14.5 ms
+Accuracy: 0.874 (87.4%)
+
+Best Models:
+Fastest Training Time: learning_rate=0.01 (3242.06 ms)
+Fastest Prediction Time: learning_rate=0.01 (7.17 ms)
+Highest Accuracy: n_estimators=1000 (0.875)
+
+[Done] exited with code=0 in 58.405 seconds
