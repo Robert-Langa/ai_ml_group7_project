@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import timeit
-
 from sklearn.model_selection import train_test_split
 import sklearn.metrics as metrics
 import matplotlib.pyplot as plt
@@ -45,7 +44,6 @@ results = {}
 
 
             # MODELS #
-results = {}
 
 # MODEL 1: Default 
 gbrt = GradientBoostingClassifier(random_state=0)
@@ -139,6 +137,24 @@ print(f"Accuracy: {acc4:.3f} ({round(100*acc4,1)}%)")
 results["max_depth=5"] = (train_time, pred_time, acc4)
 
 
+            # BEST MODEL #
+values = np.array(list(results.values()))
+
+train_arr = values[:, 0]
+pred_arr = values[:, 1]
+acc_arr = values[:, 2]
+
+model_names = list(results.keys())
+
+best_train_idx = np.argmin(train_arr)
+best_pred_idx = np.argmin(pred_arr)
+best_acc_idx = np.argmax(acc_arr)
+
+print("\nBest Models:")
+print(f"Fastest Training Time: {model_names[best_train_idx]} ({np.min(train_arr)} ms)")
+print(f"Fastest Prediction Time: {model_names[best_pred_idx]} ({np.min(pred_arr)} ms)")
+print(f"Highest Accuracy: {model_names[best_acc_idx]} ({np.max(acc_arr):.3f})")
+
 
              # GRAPH SECTION #
 model_names = list(results.keys())
@@ -150,6 +166,7 @@ accuracies = [results[m][2] for m in model_names]
 x = np.arange(len(model_names))
 width = 0.25
 
+best_model = [model1, model2, model3, model4][best_acc_idx]
 importances = gbrt.feature_importances_
 features = X_train.columns
 
